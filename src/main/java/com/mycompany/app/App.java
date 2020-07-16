@@ -13,6 +13,8 @@ import reactor.netty.tcp.ProxyProvider;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        System.setProperty("org.slf4j.simpleLogger.defaultLogLevel", "DEBUG");
+
         String url = "https://www.example.org";
 
         reactor.netty.http.client.HttpClient nettyClient = reactor.netty.http.client.HttpClient.create()
